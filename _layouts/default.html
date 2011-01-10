@@ -3,9 +3,24 @@
 <head>
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
    <title>{{ page.title }}</title>
+   <link rel="stylesheet" href="/css/main.css" type="text/css" />
 <body>
   
-{{ content }}
+  <div id="header">
+    <div id="nav">
+      <h1><a href="/">justin van eaton</a> <a href="http://github.com/jstin"><span class="color">programmer</span></a></h1>
+      <div class="right">
+        <a href="/about.html">about</a>
+        <a href="/projects.html">projects</a>
+        <a href="/blog.html">blog</a>
+      </div>
+    </div>
+  </div>
+  
+  <div id="content">
+    {{ content }}
+  </div>
+
 
 </body>
 </html>

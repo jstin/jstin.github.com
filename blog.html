@@ -1,0 +1,11 @@
+---
+layout: default
+title: Justin Van Eaton `Better Development Through Concentration`
+---
+
+<ul class="posts">
+  {% for post in site.posts %}
+    <div class="header">{{ post.date | date_to_string }}  <a href="{{ post.url }}">{{ post.title }}</a></div>
+    {{ post.content }}<br/><br/><br/><br/><br/>
+  {% endfor %}
+</ul>
