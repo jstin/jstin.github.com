@@ -7,7 +7,7 @@ title: Setting Up Amazon Route 53 on Amazon EC2
 
 So you need DNS for you EC2 instance, and don't want to run it yourself, 'cause that costs lostsa money? Whatever the reason, here are the steps I used.
 
-After trying to use Amazon perl script, and not having any success, I decided to go the Ruby approach. This [fine gem](https://github.com/pcorliss/ruby_route_53) is just what we need!
+After trying to use the Amazon perl script, and not having any success, I decided to go the Ruby approach. This [fine gem](https://github.com/pcorliss/ruby_route_53) is just what we need!
 
     sudo gem install route53
     
@@ -19,7 +19,7 @@ The first time you run this gem, it will ask for your Amazon Credentials, so ent
 
 Now we need just one more command. Add the `A` record like this.
 
-    route53 --zone internetmodulation.com. -c --name internetmodulation.com. --type CNAME --ttl 3600 --values 127.0.0.1
+    route53 --zone internetmodulation.com. -c --name internetmodulation.com. --type A --ttl 3600 --values 127.0.0.1
     
 Of course, replace `127.0.0.1` with your actual IP address. Now to list the nameservers:
 
