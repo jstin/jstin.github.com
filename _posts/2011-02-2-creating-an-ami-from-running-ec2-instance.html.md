@@ -23,7 +23,7 @@ Now make the image
     
 Upload the image to S3. 
 
-    sudo ec2-upload-bundle -b your_bucket_name -m /mnt/EC2IMAGE/the_name_you_want_to_use.manifest.xml -a your_access_key -s your_private_key
+    sudo ec2-upload-bundle -b your_bucket_name -m /mnt/MYIMAGE/the_name_you_want_to_use.manifest.xml -a your_access_key -s your_private_key
     
 Now in the [Amazon EC2 console](https://console.aws.amazon.com/ec2/home) click AMIs, and create a new one. The path will be `:80/your_bucket_name/the_name_you_want_to_use.manifest.xml`
 
